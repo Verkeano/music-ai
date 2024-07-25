@@ -37,4 +37,34 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+textarea {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-height: 50%;
+  resize: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+}
 </style>
