@@ -1,28 +1,31 @@
 <template>
-  <main>
-    <main>
-    <body>
-      <div className="App">
-        <header class="App-header">
-          <h1>LyricAI</h1>
-          <h6>Search with lyrics</h6>
-        </header>	
-        <header class="form">
-          <textarea bind:value={Lyrics}  class="search-for-lyrics" cols="30" rows="10" type="text"/>
-          <button type="submit">Search</button>
-        </header>
-        <h6>{Lyrics}</h6>
-      </div>
-    </body>
-    </main>
-  </main>
+  <div class="App">
+    <header class="App-header">
+      <h1>LyricAI</h1>
+      <h6>Search with lyrics</h6>
+    </header>
+    <div class="form">
+      <textarea :value="Lyrics" @input="updateLyrics" class="search-for-lyrics" cols="30" rows="10"></textarea>
+      <button type="submit">Search</button>
+    </div>
+    <h6>{{ Lyrics }}</h6>
+  </div>
 </template>
 
 <script>
-let Lyrics = "";
 export default {
   name: 'App',
-}
+  data() {
+    return {
+      Lyrics: "",
+    };
+  },
+  methods: {
+    updateLyrics(event) {
+      this.Lyrics = event.target.value;
+    }
+  }
+};
 </script>
 
 <style>
